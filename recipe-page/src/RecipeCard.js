@@ -11,12 +11,14 @@ const RecipeCard = ({ recipe }) => {
   return (
     <div className="recipe-card">
       <img src={recipeImage} alt={recipe.title} className="recipe-image" />
-      <h1>{recipe.title}</h1>
-      <p>{recipe.intro}</p>
-      <Preparation preparations={recipe.preparations} />
-      <Ingredients ingredients={recipe.ingredients} />
-      <Instructions instructions={recipe.ingredients} />
-      <Nutrition nutrition={recipe.nutrition} />
+      <div className='body'>
+        <h1 className='young-serif-regular stone-900-color title'>{recipe.title}</h1>
+        <p className='outfit-400 stone-600-color'>{recipe.intro}</p>
+        <Preparation preparations={recipe.preparations} />
+        <Ingredients ingredients={recipe.ingredients} />
+        <Instructions instructions={recipe.instructions} />
+        <Nutrition nutrition={recipe.nutrition} />
+      </div>
     </div>
   );
 };
